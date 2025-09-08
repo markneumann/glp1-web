@@ -1,0 +1,29 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+healthcheckPath = "/api/health"
+healthcheckTimeout = 100
+restartPolicyType = "always"
+
+[[services]]
+name = "backend"
+source = "backend/"
+
+[services.build]
+buildCommand = "npm run build"
+startCommand = "npm start"
+
+[services.variables]
+NODE_ENV = "production"
+
+[[services]]
+name = "frontend" 
+source = "frontend/"
+
+[services.build]
+buildCommand = "npm run build"
+startCommand = "npx serve -s build -p $PORT"
+
+[services.variables]
+NODE_ENV = "production"

@@ -55,9 +55,24 @@ A comprehensive GLP-1 medication tracking web application built with React/TypeS
 
 ## Development
 
-- Backend runs on `http://localhost:5000`
+- Backend runs on `http://localhost:4000`
 - Frontend runs on `http://localhost:3000`
 - MongoDB required (local or cloud instance)
+
+## Deployment
+
+This application is configured for deployment on Railway. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
+
+### Quick Deploy to Railway
+
+1. Fork/clone this repository
+2. Create a [Railway](https://railway.app) account
+3. Connect your GitHub repository
+4. Follow the step-by-step guide in [DEPLOYMENT.md](DEPLOYMENT.md)
+
+The app will be deployed as two separate services:
+- **Backend API**: Node.js/Express server
+- **Frontend**: Static React app served with `serve`
 
 ## Project Structure
 
